@@ -1,246 +1,400 @@
 <!DOCTYPE html>
-<html lang="zh-Hant" class="scroll-smooth">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>禕峰行銷｜口碑行銷最佳選擇</title>
-  <meta name="description" content="禕峰行銷提供 AI 輿情監測、口碑聲量佈局、真人寫手與 AI 效率整合，協助品牌提升消費者轉換前的信任感。" />
+
+  <title>禕峰行銷｜真人帳號口碑操作與 AI 輿情監控</title>
+
+  <meta
+    name="description"
+    content="禕峰行銷專注真人帳號操作口碑行銷，結合 AI 輿情監控、論壇社群聲量佈局與專人策略規劃，協助品牌建立自然可信的網路口碑。"
+  />
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            skySoft: '#E0F2FE',
-            pinkSoft: '#FDF2F8',
-            ocean: '#0369A1',
-            pinkHot: '#EC4899'
-          },
-          boxShadow: {
-            soft: '0 18px 45px rgba(3, 105, 161, 0.12)'
-          }
-        }
-      }
-    }
-  </script>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
   <style>
-    .fade-in { opacity: 0; transform: translateY(18px); transition: all .8s ease; }
-    .fade-in.show { opacity: 1; transform: translateY(0); }
-    .blob { filter: blur(1px); animation: float 7s ease-in-out infinite; }
-    @keyframes float {
-      0%,100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-18px) rotate(6deg); }
+    html { scroll-behavior: smooth; }
+
+    .fade-in {
+      animation: fadeIn 0.9s ease-in-out both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .floating {
+      animation: floating 4s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-14px); }
     }
   </style>
 </head>
 
-<body class="bg-gradient-to-br from-skySoft via-white to-pinkSoft text-slate-700 overflow-x-hidden">
-  <div class="fixed inset-0 -z-10 overflow-hidden">
-    <div class="blob absolute top-24 left-8 w-28 h-28 rounded-3xl bg-pink-200/50"></div>
-    <div class="blob absolute top-40 right-10 w-40 h-40 rounded-full bg-sky-200/60" style="animation-delay:1s"></div>
-    <div class="blob absolute bottom-20 left-1/4 w-24 h-24 rounded-full bg-pink-100/80" style="animation-delay:2s"></div>
-  </div>
+<body class="bg-gradient-to-br from-sky-100 via-white to-pink-100 text-slate-800">
 
   <!-- Navigation -->
-  <header class="sticky top-0 z-50 bg-white/75 backdrop-blur-xl border-b border-white/70">
-    <nav class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3 group" aria-label="禕峰行銷首頁">
-        <div class="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-300 to-pink-300 shadow-soft grid place-items-center">
-          <span class="text-ocean font-black text-2xl">禕</span>
-          <span class="absolute -right-1 -top-1 w-4 h-4 bg-white rounded-full border-2 border-pink-300"></span>
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-white/60">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <!-- 純文字 LOGO -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-sky-400 to-pink-400 flex items-center justify-center text-white font-black shadow">
+          禕
         </div>
-        <div>
-          <div class="text-ocean font-black text-xl tracking-wide">禕峰行銷</div>
-          <div class="text-xs text-slate-400 tracking-[0.25em]">YI FENG MARKETING</div>
-        </div>
+        <span class="text-2xl font-black tracking-tight text-sky-700">
+          禕峰行銷
+        </span>
       </a>
-      <div class="hidden md:flex items-center gap-8 font-semibold text-slate-600">
-        <a href="#features" class="hover:text-pinkHot transition">服務優勢</a>
-        <a href="#promise" class="hover:text-pinkHot transition">獨家保證</a>
-        <a href="#pricing" class="hover:text-pinkHot transition">收費方案</a>
-        <a href="#contact" class="hover:text-pinkHot transition">聯絡我們</a>
-      </div>
-      <a href="#contact" class="hidden sm:inline-flex px-5 py-2.5 rounded-full bg-ocean text-white font-bold shadow-soft hover:scale-105 transition">免費諮詢</a>
-    </nav>
+
+      <nav class="hidden md:flex gap-8 text-sm font-semibold">
+        <a href="#features" class="hover:text-pink-500 transition">服務優勢</a>
+        <a href="#commitment" class="hover:text-pink-500 transition">獨家承諾</a>
+        <a href="#pricing" class="hover:text-pink-500 transition">收費方案</a>
+        <a href="#contact" class="hover:text-pink-500 transition">聯絡我們</a>
+      </nav>
+    </div>
   </header>
 
   <!-- Hero -->
-  <section class="max-w-7xl mx-auto px-5 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
-    <div class="fade-in">
-      <span class="inline-flex px-4 py-2 rounded-full bg-white/80 text-ocean font-bold shadow-sm mb-6">AI 驅動 × 真人口碑 × 高轉換佈局</span>
+  <section class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center fade-in">
+    <div>
+      <span class="inline-block mb-4 px-4 py-2 rounded-full bg-white shadow text-sky-700 font-semibold">
+        精準・效率・確實
+      </span>
+
       <h1 class="text-4xl md:text-6xl font-black leading-tight text-slate-900">
         口碑行銷最佳選擇<br />
-        <span class="text-ocean">—— 禕峰行銷</span>
+        <span class="text-sky-700">禕峰行銷</span>
       </h1>
-      <p class="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed">
-        超越同業的品牌策略，佈局消費者轉換前的關鍵佈局。
+
+      <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+        讓品牌在消費者搜尋、比較、猶豫的關鍵時刻，被看見、被信任、被選擇。
       </p>
-      <div class="mt-9 flex flex-col sm:flex-row gap-4">
-        <a href="#contact" class="px-8 py-4 rounded-full bg-gradient-to-r from-pink-400 to-pink-500 text-white font-black text-center shadow-soft hover:scale-105 transition">立即諮詢</a>
-        <a href="#pricing" class="px-8 py-4 rounded-full bg-white text-ocean font-black text-center shadow-soft hover:scale-105 transition">查看方案</a>
-      </div>
+
+      <p class="mt-4 text-slate-600 leading-relaxed">
+        結合上千隻真人帳號資源、AI 輿情監控與專人策略操作，為品牌打造更自然、更有效率的網路聲量。
+      </p>
+
+      <a
+        href="#contact"
+        class="inline-block mt-8 px-8 py-4 rounded-full bg-gradient-to-r from-pink-400 to-sky-500 text-white font-bold shadow-lg hover:scale-105 transition"
+      >
+        立即諮詢
+      </a>
     </div>
 
-    <div class="fade-in relative">
-      <div class="absolute -inset-6 bg-gradient-to-br from-sky-200/70 to-pink-200/70 rounded-[3rem] blur-2xl"></div>
-      <div class="relative bg-white/85 rounded-[2.5rem] p-7 shadow-soft border border-white">
-        <div class="rounded-[2rem] bg-gradient-to-br from-skySoft to-pinkSoft p-6">
-          <div class="flex justify-between items-center mb-8">
-            <div>
-              <div class="text-sm text-slate-500">Brand Trust Index</div>
-              <div class="text-4xl font-black text-ocean">92%</div>
-            </div>
-            <div class="w-16 h-16 rounded-3xl bg-white shadow grid place-items-center text-3xl">🤖</div>
+    <div class="relative">
+      <div class="floating bg-white rounded-[2rem] shadow-2xl p-8">
+        <div class="grid grid-cols-2 gap-5">
+          <div class="rounded-3xl bg-sky-100 p-6 text-center">
+            <i class="fa-solid fa-users text-4xl text-sky-600 mb-4"></i>
+            <p class="font-bold">真人帳號操作</p>
           </div>
-          <div class="space-y-4">
-            <div class="bg-white rounded-2xl p-4 shadow-sm flex items-center gap-4">
-              <span class="w-10 h-10 rounded-xl bg-sky-100 grid place-items-center">📡</span>
-              <div><b>AI 輿情監測</b><p class="text-sm text-slate-500">即時捕捉品牌討論與風向</p></div>
-            </div>
-            <div class="bg-white rounded-2xl p-4 shadow-sm flex items-center gap-4">
-              <span class="w-10 h-10 rounded-xl bg-pink-100 grid place-items-center">✍️</span>
-              <div><b>真人寫手口碑</b><p class="text-sm text-slate-500">自然、有感、貼近消費者語氣</p></div>
-            </div>
-            <div class="bg-white rounded-2xl p-4 shadow-sm flex items-center gap-4">
-              <span class="w-10 h-10 rounded-xl bg-sky-100 grid place-items-center">📈</span>
-              <div><b>轉換前信任佈局</b><p class="text-sm text-slate-500">讓客戶搜尋時看到正確答案</p></div>
-            </div>
+
+          <div class="rounded-3xl bg-pink-100 p-6 text-center">
+            <i class="fa-solid fa-chart-line text-4xl text-pink-500 mb-4"></i>
+            <p class="font-bold">AI 輿情監控</p>
+          </div>
+
+          <div class="rounded-3xl bg-pink-100 p-6 text-center">
+            <i class="fa-solid fa-comments text-4xl text-pink-500 mb-4"></i>
+            <p class="font-bold">社群聲量</p>
+          </div>
+
+          <div class="rounded-3xl bg-sky-100 p-6 text-center">
+            <i class="fa-solid fa-bullseye text-4xl text-sky-600 mb-4"></i>
+            <p class="font-bold">策略佈局</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Problem -->
-  <section class="max-w-7xl mx-auto px-5 py-16">
-    <div class="fade-in text-center max-w-3xl mx-auto">
-      <h2 class="text-3xl md:text-5xl font-black text-slate-900">客戶心中的疑問，您回答了嗎？</h2>
-      <p class="mt-5 text-lg text-slate-600">消費者下單前，通常會先搜尋品牌、評價與真實使用經驗。</p>
+  <!-- Problems -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-black text-slate-900">
+        客戶心中的疑問，您回答了嗎？
+      </h2>
+      <p class="mt-4 text-slate-600">
+        消費者看到廣告後，下一步通常不是直接購買，而是開始搜尋。
+      </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-6 mt-12">
-      <div class="fade-in bg-white rounded-3xl p-8 shadow-soft text-center"><div class="text-5xl mb-4">🛒</div><h3 class="text-2xl font-black text-ocean">有人買過嗎？</h3></div>
-      <div class="fade-in bg-white rounded-3xl p-8 shadow-soft text-center"><div class="text-5xl mb-4">✨</div><h3 class="text-2xl font-black text-ocean">品質好嗎？</h3></div>
-      <div class="fade-in bg-white rounded-3xl p-8 shadow-soft text-center"><div class="text-5xl mb-4">💬</div><h3 class="text-2xl font-black text-ocean">售後服務好嗎？</h3></div>
+
+    <div class="grid md:grid-cols-5 gap-5">
+      <div class="bg-white rounded-3xl shadow p-6 text-center">
+        <i class="fa-solid fa-circle-question text-3xl text-sky-600 mb-4"></i>
+        <p class="font-bold">有人買過嗎？</p>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow p-6 text-center">
+        <i class="fa-solid fa-star text-3xl text-pink-500 mb-4"></i>
+        <p class="font-bold">真的有效嗎？</p>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow p-6 text-center">
+        <i class="fa-solid fa-shield-halved text-3xl text-sky-600 mb-4"></i>
+        <p class="font-bold">品質穩定嗎？</p>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow p-6 text-center">
+        <i class="fa-solid fa-headset text-3xl text-pink-500 mb-4"></i>
+        <p class="font-bold">售後好嗎？</p>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow p-6 text-center">
+        <i class="fa-solid fa-magnifying-glass text-3xl text-sky-600 mb-4"></i>
+        <p class="font-bold">評價可信嗎？</p>
+      </div>
     </div>
-    <p class="fade-in mt-10 text-center text-xl font-black text-pinkHot">若沒在網路上解答疑問，您的潛在客戶就會在評估中流失！</p>
+
+    <p class="mt-10 text-center text-lg font-bold text-sky-800">
+      如果搜尋結果沒有近期討論、真實心得與正向回饋，潛在客戶就可能在評估階段流失。
+    </p>
+  </section>
+
+  <!-- What We Do -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="bg-white/80 rounded-[2rem] shadow-xl p-10 md:p-14">
+      <h2 class="text-3xl md:text-4xl font-black text-slate-900 text-center">
+        禕峰行銷能為您做什麼？
+      </h2>
+
+      <p class="mt-6 text-slate-600 leading-relaxed text-center max-w-3xl mx-auto">
+        我們不是單純發文，而是協助品牌建立「可被搜尋、可被討論、可被信任」的網路口碑基礎。
+      </p>
+
+      <p class="mt-4 text-slate-600 leading-relaxed text-center max-w-3xl mx-auto">
+        透過論壇、社群、FB 社團、Threads、Dcard、PTT、Mobile01 等多元渠道，依照品牌產業、受眾輪廓與銷售情境，規劃最適合的口碑佈局。
+      </p>
+    </div>
   </section>
 
   <!-- Features -->
-  <section id="features" class="max-w-7xl mx-auto px-5 py-16">
-    <h2 class="fade-in text-3xl md:text-5xl font-black text-center text-slate-900">核心優勢：AI 驅動口碑佈局</h2>
-    <div class="grid md:grid-cols-3 gap-6 mt-12">
-      <article class="fade-in bg-white/90 rounded-3xl p-8 shadow-soft border border-white"><span class="text-4xl">🛰️</span><h3 class="mt-5 text-2xl font-black text-ocean">AI 輿情監測</h3><p class="mt-3 leading-relaxed">24h 全天候社群、論壇、新聞監測，自動判別好負評。</p></article>
-      <article class="fade-in bg-white/90 rounded-3xl p-8 shadow-soft border border-white"><span class="text-4xl">📊</span><h3 class="mt-5 text-2xl font-black text-ocean">獨家聲量公式</h3><p class="mt-3 leading-relaxed">透過大數據定義您與對手的 PR 值，找出最有效的口碑切入點。</p></article>
-      <article class="fade-in bg-white/90 rounded-3xl p-8 shadow-soft border border-white"><span class="text-4xl">🚀</span><h3 class="mt-5 text-2xl font-black text-ocean">600+真人寫手與AI軍團</h3><p class="mt-3 leading-relaxed">業界最強戰力，真人質感與 AI 效率完美結合。</p></article>
+  <section id="features" class="max-w-7xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-black">
+        核心優勢
+      </h2>
+      <p class="mt-4 text-slate-600">
+        真人帳號操作 × AI 輿情監控 × 專人策略規劃，讓口碑不只是曝光，而是建立信任。
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-[2rem] shadow-lg p-8">
+        <i class="fa-solid fa-users text-4xl text-sky-600 mb-6"></i>
+        <h3 class="text-xl font-black mb-4">上千隻真人帳號資源</h3>
+        <p class="text-slate-600 leading-relaxed">
+          依照不同平台、產業與討論情境進行操作，避免制式業配感，讓內容更接近真實使用者討論。
+        </p>
+      </div>
+
+      <div class="bg-white rounded-[2rem] shadow-lg p-8">
+        <i class="fa-solid fa-chart-simple text-4xl text-pink-500 mb-6"></i>
+        <h3 class="text-xl font-black mb-4">AI 輿情監控與風向分析</h3>
+        <p class="text-slate-600 leading-relaxed">
+          掌握品牌、競品與市場關鍵字的討論趨勢，觀察聲量變化、熱門來源、正負評與消費者疑慮。
+        </p>
+      </div>
+
+      <div class="bg-white rounded-[2rem] shadow-lg p-8">
+        <i class="fa-solid fa-bullseye text-4xl text-sky-600 mb-6"></i>
+        <h3 class="text-xl font-black mb-4">專屬口碑策略規劃</h3>
+        <p class="text-slate-600 leading-relaxed">
+          依據產品特色、目標客群、競品狀況與銷售目標，設計專屬議題切角、發文平台與操作節奏。
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- Commitment -->
-  <section id="promise" class="max-w-7xl mx-auto px-5 py-16">
-    <div class="fade-in rounded-[2.5rem] bg-gradient-to-br from-ocean to-sky-500 p-8 md:p-12 text-white shadow-soft">
-      <h2 class="text-3xl md:text-5xl font-black text-center">獨家保證：我們的差異化</h2>
-      <div class="grid md:grid-cols-3 gap-6 mt-10">
-        <div class="bg-white/15 rounded-3xl p-7 backdrop-blur"><h3 class="text-2xl font-black">單品牌只接一個</h3><p class="mt-3 text-sky-50">單一產業別僅服務一位客戶，絕不製造惡性競爭。</p></div>
-        <div class="bg-white/15 rounded-3xl p-7 backdrop-blur"><h3 class="text-2xl font-black">每月線上會議</h3><p class="mt-3 text-sky-50">固定線上會議，根據數據即時調整操作策略。</p></div>
-        <div class="bg-white/15 rounded-3xl p-7 backdrop-blur"><h3 class="text-2xl font-black">KPI 退費保證</h3><p class="mt-3 text-sky-50">白紙黑字，未達標依比例退費。</p></div>
+  <section id="commitment" class="max-w-7xl mx-auto px-6 py-20">
+    <div class="bg-white rounded-[2rem] shadow-xl p-10 md:p-14">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-black">
+          我們的差異化承諾
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="rounded-3xl bg-sky-50 p-8">
+          <i class="fa-solid fa-shield-check text-4xl text-sky-700 mb-5"></i>
+          <h3 class="text-xl font-black mb-3">單品牌只接一個</h3>
+          <p class="text-slate-600 leading-relaxed">
+            同一產業別僅服務一位客戶，避免同業競爭與策略衝突，專注協助您的品牌成長。
+          </p>
+        </div>
+
+        <div class="rounded-3xl bg-pink-50 p-8">
+          <i class="fa-solid fa-calendar-check text-4xl text-pink-500 mb-5"></i>
+          <h3 class="text-xl font-black mb-3">每月線上會議</h3>
+          <p class="text-slate-600 leading-relaxed">
+            每月固定檢視操作成果，根據數據與市場回饋調整策略，持續優化口碑方向。
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Pricing -->
-  <section id="pricing" class="max-w-7xl mx-auto px-5 py-16">
-    <div class="fade-in text-center">
-      <h2 class="text-3xl md:text-5xl font-black text-slate-900">透明收費方案</h2>
-      <p class="mt-4 text-slate-600 text-lg">從輕用量試用到完整口碑佈局，依品牌階段彈性選擇。</p>
+  <section id="pricing" class="max-w-7xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-black">
+        口碑行銷方案
+      </h2>
+      <p class="mt-4 text-slate-600">
+        依照品牌階段與操作需求，選擇最適合的口碑佈局方案。
+      </p>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
-      <div class="fade-in bg-white rounded-[2rem] p-8 md:p-10 shadow-soft border-2 border-sky-100">
-        <span class="inline-flex px-4 py-2 rounded-full bg-skySoft text-ocean font-black">輕用量試用方案</span>
-        <h3 class="mt-6 text-2xl font-black text-slate-900">口碑行銷入門試水溫</h3>
-        <div class="mt-6 flex items-end gap-2">
-          <span class="text-5xl font-black text-ocean">NT$ 8,000</span>
-          <span class="pb-2 text-slate-500">/ 每月試用</span>
-        </div>
-        <ul class="mt-8 space-y-4">
-          <li>✅ 基礎文章撰寫</li>
-          <li>✅ 輕量留言置入</li>
-          <li>✅ 基礎聲量觀察</li>
-          <li>✅ 適合首次嘗試口碑行銷品牌</li>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-[2rem] shadow-xl p-8 border-2 border-sky-200">
+        <i class="fa-solid fa-crown text-4xl text-sky-600 mb-5"></i>
+
+        <h3 class="text-2xl font-black">標準口碑方案</h3>
+
+        <p class="mt-4 text-4xl font-black text-sky-700">
+          NT$ 35,000
+          <span class="text-base text-slate-500">/ 每月</span>
+        </p>
+
+        <ul class="mt-8 space-y-4 text-slate-600">
+          <li>✓ 口碑文章撰寫</li>
+          <li>✓ 論壇 / 社群留言置入</li>
+          <li>✓ 真人帳號資源搭配</li>
+          <li>✓ 每月留言與操作報告</li>
+          <li>✓ 每月線上會議調整策略</li>
+          <li>✓ AI 輿情監控與風向建議</li>
         </ul>
-        <a href="https://lin.ee/zRPTAyF" target="_blank" rel="noopener" class="mt-8 block text-center px-8 py-4 rounded-full bg-white border-2 border-ocean text-ocean font-black hover:bg-ocean hover:text-white transition">立即試用諮詢</a>
+
+        <a
+          href="https://lin.ee/snDcrTV"
+          target="_blank"
+          class="block text-center mt-8 px-6 py-4 rounded-full bg-sky-600 text-white font-bold hover:bg-sky-700 transition"
+        >
+          立即私訊諮詢
+        </a>
       </div>
 
-      <div class="fade-in relative bg-white rounded-[2rem] p-8 md:p-10 shadow-soft border-2 border-pink-200">
-        <span class="absolute -top-4 right-8 px-5 py-2 rounded-full bg-gradient-to-r from-pink-400 to-pink-500 text-white font-black shadow">推薦</span>
-        <span class="inline-flex px-4 py-2 rounded-full bg-pinkSoft text-pinkHot font-black">低成本口碑行銷方案</span>
-        <h3 class="mt-6 text-2xl font-black text-slate-900">完整月度品牌口碑佈局</h3>
-        <div class="mt-6 flex items-end gap-2">
-          <span class="text-5xl font-black text-ocean">NT$ 30,000</span>
-          <span class="pb-2 text-slate-500">/ 每月</span>
-        </div>
-        <ul class="mt-8 space-y-4">
-          <li>✅ 文章撰寫</li>
-          <li>✅ 留言置入</li>
-          <li>✅ 每月聲量報告</li>
-          <li>✅ 每月線上會議調整</li>
+      <div class="bg-white rounded-[2rem] shadow-xl p-8 border-2 border-pink-200">
+        <i class="fa-solid fa-coins text-4xl text-pink-500 mb-5"></i>
+
+        <h3 class="text-2xl font-black">入門口碑方案</h3>
+
+        <p class="mt-4 text-4xl font-black text-pink-500">
+          NT$ 8,000
+          <span class="text-base text-slate-500">/ 每月</span>
+        </p>
+
+        <p class="mt-4 text-slate-600">
+          適合剛開始建立網路聲量的品牌。
+        </p>
+
+        <ul class="mt-8 space-y-4 text-slate-600">
+          <li>✓ 基礎文章撰寫</li>
+          <li>✓ 基礎留言置入</li>
+          <li>✓ 每月操作紀錄</li>
+          <li>✓ 初步口碑方向建議</li>
         </ul>
-        <a href="https://lin.ee/zRPTAyF" target="_blank" rel="noopener" class="mt-8 block text-center px-8 py-4 rounded-full bg-gradient-to-r from-pink-400 to-pink-500 text-white font-black shadow-soft hover:scale-105 transition">立即私訊諮詢</a>
+
+        <a
+          href="https://lin.ee/snDcrTV"
+          target="_blank"
+          class="block text-center mt-8 px-6 py-4 rounded-full bg-gradient-to-r from-pink-400 to-sky-500 text-white font-bold hover:scale-105 transition"
+        >
+          立即私訊諮詢
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="max-w-7xl mx-auto px-5 py-16">
-    <div class="grid lg:grid-cols-2 gap-10 items-start">
-      <div class="fade-in">
-        <h2 class="text-3xl md:text-5xl font-black text-slate-900">聯絡我們</h2>
-        <p class="mt-5 text-lg text-slate-600">讓禕峰行銷協助您在消費者搜尋、比較、猶豫的關鍵時刻，建立值得信任的品牌聲量。</p>
-        <div class="mt-8 bg-white rounded-3xl p-7 shadow-soft">
-          <p class="font-bold text-ocean">地址</p>
-          <p class="mt-2">台北市中山區中山北路二段45巷3號6樓</p>
-          <p class="mt-6 font-bold text-ocean">LINE</p>
-          <p class="mt-2 text-2xl font-black">@145hepbw</p>
-          <a href="https://lin.ee/zRPTAyF" target="_blank" rel="noopener" class="mt-5 inline-flex px-7 py-4 rounded-full bg-gradient-to-r from-sky-400 to-pink-400 text-white font-black shadow-soft hover:scale-105 transition">點我加 LINE 直接聊</a>
-        </div>
-      </div>
+  <!-- Suitable Brands -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-black">
+        適合哪些品牌？
+      </h2>
+      <p class="mt-4 text-slate-600">
+        如果您的品牌目前遇到以下狀況，口碑行銷會是很好的加速器。
+      </p>
+    </div>
 
-      <form class="fade-in bg-white rounded-[2rem] p-8 shadow-soft space-y-5">
-        <div>
-          <label class="font-bold text-slate-700">姓名</label>
-          <input type="text" class="mt-2 w-full rounded-2xl border border-sky-100 px-4 py-3 focus:outline-none focus:ring-4 focus:ring-sky-100" placeholder="請輸入姓名">
-        </div>
-        <div>
-          <label class="font-bold text-slate-700">電話</label>
-          <input type="tel" class="mt-2 w-full rounded-2xl border border-sky-100 px-4 py-3 focus:outline-none focus:ring-4 focus:ring-sky-100" placeholder="請輸入聯絡電話">
-        </div>
-        <div>
-          <label class="font-bold text-slate-700">品牌名稱</label>
-          <input type="text" class="mt-2 w-full rounded-2xl border border-sky-100 px-4 py-3 focus:outline-none focus:ring-4 focus:ring-sky-100" placeholder="請輸入品牌名稱">
-        </div>
-        <div>
-          <label class="font-bold text-slate-700">需求內容</label>
-          <textarea rows="5" class="mt-2 w-full rounded-2xl border border-sky-100 px-4 py-3 focus:outline-none focus:ring-4 focus:ring-sky-100" placeholder="想提升評價、增加搜尋聲量、處理負評或建立口碑？"></textarea>
-        </div>
-        <button type="button" class="w-full px-8 py-4 rounded-full bg-ocean text-white font-black shadow-soft hover:scale-[1.02] transition">送出需求</button>
-        <p class="text-xs text-slate-400 text-center">表單為前端展示版，正式上線可串接 Google Form、Email 或 CRM。</p>
-      </form>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="bg-white rounded-3xl shadow p-6">✓ 廣告有流量，但轉換率不穩</div>
+      <div class="bg-white rounded-3xl shadow p-6">✓ 消費者搜尋不到品牌討論</div>
+      <div class="bg-white rounded-3xl shadow p-6">✓ 網路上缺少近期評價</div>
+      <div class="bg-white rounded-3xl shadow p-6">✓ 競品聲量明顯高於自己</div>
+      <div class="bg-white rounded-3xl shadow p-6">✓ 新產品上市需要建立信任</div>
+      <div class="bg-white rounded-3xl shadow p-6">✓ 想降低消費者購買前疑慮</div>
     </div>
   </section>
 
-  <footer class="py-10 text-center text-slate-500">
-    <p class="font-bold text-ocean">禕峰行銷 Yi Feng Marketing</p>
-    <p class="mt-2">© 2026 禕峰行銷. All rights reserved.</p>
+  <!-- Contact / CTA -->
+  <section id="contact" class="max-w-5xl mx-auto px-6 py-24">
+    <div class="bg-white rounded-[2rem] shadow-2xl p-10 md:p-14 text-center">
+
+      <span class="inline-block px-4 py-2 rounded-full bg-sky-100 text-sky-700 font-bold mb-6">
+        免費品牌口碑健檢
+      </span>
+
+      <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight">
+        讓我們協助您的品牌<br />
+        建立真正有信任感的網路口碑
+      </h2>
+
+      <p class="mt-6 text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+        不論您是剛起步的新品牌，還是已經投放廣告卻缺乏轉換，
+        禕峰行銷都能協助您找到最適合的口碑操作方向。
+      </p>
+
+      <div class="mt-10 flex flex-col md:flex-row justify-center gap-5">
+        <a
+          href="https://lin.ee/snDcrTV"
+          target="_blank"
+          class="px-8 py-5 rounded-full bg-green-500 text-white font-black text-lg shadow-xl hover:scale-105 transition"
+        >
+          <i class="fa-brands fa-line mr-2"></i>
+          點我加入 LINE 諮詢
+        </a>
+
+        <a
+          href="tel:0912345678"
+          class="px-8 py-5 rounded-full bg-sky-100 text-sky-700 font-black text-lg hover:bg-sky-200 transition"
+        >
+          <i class="fa-solid fa-phone mr-2"></i>
+          立即來電洽詢
+        </a>
+      </div>
+
+      <div class="mt-10 text-slate-500 text-sm leading-relaxed">
+        <p>
+          <i class="fa-solid fa-location-dot text-sky-600 mr-2"></i>
+          台北市中山區中山北路二段45巷3號6樓
+        </p>
+        <p class="mt-2">
+          <i class="fa-brands fa-line text-green-500 mr-2"></i>
+          LINE：@145hepbw
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-sm text-slate-500">
+    © 2026 禕峰行銷. All Rights Reserved.
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('show');
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
 </body>
 </html>
